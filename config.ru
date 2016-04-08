@@ -20,12 +20,12 @@ class App < Sinatra::Base
       endpoint_uri = 'https://trialbot-api.line.me/v1/events'
       content_json = request_content.to_json
 
-      RestClient.proxy = ENV["FIXIE_URL"]
+      RestClient.proxy = 'http://fixie:S5RArp1neEfosfX@velodrome.usefixie.com:80'
       RestClient.post(endpoint_uri, content_json, {
         'Content-Type' => 'application/json; charset=UTF-8',
-        'X-Line-ChannelID' => "1462016721",
-        'X-Line-ChannelSecret' => "f2816c5f890988372795d7245000651a",
-        'X-Line-Trusted-User-With-ACL' => "u9f218ae0bbd7bdf568f3714324d2ee9a",
+        'X-Line-ChannelID' => '1462016721',
+        'X-Line-ChannelSecret' => 'f2816c5f890988372795d7245000651a',
+        'X-Line-Trusted-User-With-ACL' => 'u9f218ae0bbd7bdf568f3714324d2ee9a',
       })
     end
 
