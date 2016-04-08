@@ -5,8 +5,13 @@ require 'sinatra/base'
 require 'json'
 require 'rest_client'
 
+
 class App < Sinatra::Base
-  post '/linebot/callback' do
+  get '/' do
+    "Hello World"
+  end
+
+  post '/callback' do
     params = JSON.parse(request.body.read)
 
     params['result'].each do |msg|
