@@ -3,7 +3,7 @@
 require 'bundler/setup'
 require 'sinatra/base'
 require 'json'
-require 'rest-client'
+require 'rest_client'
 
 class App < Sinatra::Base
   post '/linebot/callback' do
